@@ -12,4 +12,8 @@ describe '#increment_string' do
   it 'increments the number by 1 for higher numbers than 1' do
     expect(increment_string('foo9')).to eq('foo10')
   end
+
+  it 'increments the number when the number is more than one digit' do
+    expect(increment_string('foo23')).to eq('foo24')
+  end
 end
