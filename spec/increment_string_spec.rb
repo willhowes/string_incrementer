@@ -16,4 +16,8 @@ describe '#increment_string' do
   it 'increments the number when the number is more than one digit' do
     expect(increment_string('foo23')).to eq('foo24')
   end
+
+  it 'increments the number when there are trailing 00s' do
+    expect(increment_string('foo0042')).to eq('foo0043') 
+  end
 end
